@@ -6,37 +6,69 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Contact - Revin Prasya Danendra</title>
 
+  <!-- Bootstrap & Icons -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="contact-page">
+<body>
 
-  <header class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <h1 class="sitename">Revin Prasya Danendra</h1>
-    </div>
-  </header>
+  <!-- ================= HEADER ================= -->
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-  <main class="main">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Revin</h1>
+      </a>
 
-    <section class="contact section">
-      <div class="container section-title text-center">
-        <h2>Contact Me</h2>
-        <p>Silakan kirim pesan jika ingin berdiskusi atau kolaborasi.</p>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://linkedin.com/" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
       </div>
 
+    </div>
+  </header>
+  <!-- ================= END HEADER ================= -->
+
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <main class="main">
+
+    <section class="contact section py-5">
       <div class="container">
+
+        <div class="text-center mb-4">
+          <h2>Contact Me</h2>
+          <p>Silakan kirim pesan jika ingin berdiskusi, kolaborasi, atau peluang kerja.</p>
+        </div>
+
         <div class="row justify-content-center">
           <div class="col-lg-8">
 
-            <!-- SUCCESS MESSAGE -->
+            <!-- Success -->
             <div id="form-success" class="alert alert-success d-none text-center">
               ✅ Pesan berhasil dikirim. Terima kasih!
             </div>
 
-            <!-- ERROR MESSAGE -->
+            <!-- Error -->
             <div id="form-error" class="alert alert-danger d-none text-center">
               ❌ Terjadi kesalahan. Silakan coba lagi.
             </div>
@@ -46,8 +78,11 @@
               method="POST"
               class="p-4 shadow rounded bg-white">
 
-              <!-- Optional Subject -->
+              <!-- Subject -->
               <input type="hidden" name="_subject" value="Pesan Baru dari Website Revin">
+
+              <!-- Anti Spam -->
+              <input type="text" name="_gotcha" style="display:none">
 
               <div class="mb-3">
                 <label class="form-label">Your Name</label>
@@ -79,12 +114,24 @@
 
           </div>
         </div>
-      </div>
 
+      </div>
     </section>
 
   </main>
+  <!-- ================= END CONTACT SECTION ================= -->
 
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer text-center py-4">
+    <div class="container">
+      <p>© 2026 Revin Prasya Danendra. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- ================= END FOOTER ================= -->
+
+
+  <!-- ================= SCRIPT ================= -->
   <script>
     const form = document.getElementById("contact-form");
     const successMessage = document.getElementById("form-success");
